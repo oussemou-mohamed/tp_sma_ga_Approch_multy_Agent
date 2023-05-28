@@ -7,12 +7,12 @@ public class AgentFitness implements Comparable{
     /////////////////////////////////////////////////
     private AID aid;
     private int fitness;
-    ////////////////////////////////////////////////
+
     public AgentFitness(AID aid, int fitness) {
         this.aid = aid;
         this.fitness = fitness;
     }
-    ///////////////////////////////////////////////
+
     public AID getAid() {
         return aid;
     }
@@ -28,7 +28,6 @@ public class AgentFitness implements Comparable{
     public void setFitness(int fitness) {
         this.fitness = fitness;
     }
-    ///////////////////////////////////////////////
     @Override
     public int compareTo(Object o) {
         AgentFitness agentFitness=(AgentFitness) o;

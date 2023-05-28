@@ -5,18 +5,18 @@ import java.util.Random;
 public class Individual implements Comparable{
     //Bonjour
     //chromosome
-    private char genes[]=new char[GAUtils.MAX_FITNES];
+    private char genes[]=new char[GAUtils.MAX_FITNESS];
     private int fitness;
 
     public Individual() {
         Random rnd=new Random();
         for (int i=0;i<genes.length;i++){
-            genes[i]= GAUtils.CHARATERS.charAt(rnd.nextInt(GAUtils.CHARATERS.length()));
+            genes[i]= GAUtils.CHARACTERS.charAt(rnd.nextInt(GAUtils.CHARACTERS.length()));
         }
     }
     public void calculateFitness(){
         fitness=0;
-        for (int i = 0; i<GAUtils.MAX_FITNES; i++) {
+        for (int i = 0; i<GAUtils.MAX_FITNESS; i++) {
             if(genes[i]==GAUtils.SOLUTION.charAt(i))
                 fitness+=1;
         }
